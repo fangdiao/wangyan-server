@@ -79,4 +79,11 @@ export default class ItemModel {
     return res;
   }
 
+  // 删除数据
+
+  async delete (time) {
+    await items.remove({time});
+    return true;
+  }
+
 };

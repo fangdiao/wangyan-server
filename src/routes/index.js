@@ -45,6 +45,8 @@ export const routeFun = () => {
 
   // 与我相关
   router.post('/item/aboutme', itemController.aboutMe);
+  // 删除动态
+  router.post('/item/delete', itemController.delete);
   // 获取我发布的动态
   router.post('/item/myrelease', itemController.myRelease);
   // 发布动态

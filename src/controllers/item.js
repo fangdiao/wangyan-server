@@ -92,4 +92,15 @@ export default class ItemController {
     };
     await next();
   }
+
+  // 删除刷剧
+
+  async delete (ctx, next) {
+    let { time } = ctx.request.body;
+    await itemModel.delete(time);
+    ctx.body = {
+      success: true
+    };
+    await next();
+  }
 };
