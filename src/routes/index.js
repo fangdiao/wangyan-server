@@ -66,5 +66,6 @@ export const routeFun = () => {
     }
     await next();
   });
+  console.log('图片服务器启动成功，载入路由成功...');
   return router;
 };

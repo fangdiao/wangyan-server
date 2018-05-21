@@ -13,6 +13,7 @@ export default class ItemController {
     ctx.body = {
       success: true
     };
+    console.log('发布动态');
     await next();
   }
 
@@ -25,6 +26,7 @@ export default class ItemController {
       success: true,
       data
     };
+    console.log('首页获取信息');
     await next();
   }
 
@@ -38,6 +40,7 @@ export default class ItemController {
     ctx.body = {
       success: true
     };
+    console.log('点赞');
     await next();
   }
 
@@ -50,6 +53,7 @@ export default class ItemController {
     ctx.body = {
       success: true
     };
+    console.log('取消点赞');
     await next();
   }
 
@@ -63,6 +67,7 @@ export default class ItemController {
     ctx.body = {
       success: true
     };
+    console.log('评论');
     await next();
   }
 
@@ -80,6 +85,7 @@ export default class ItemController {
       success: true,
       data
     };
+    console.log('获取与我相关的动态')
     await next();
   }
   // 获取我发布的动态
@@ -90,10 +96,11 @@ export default class ItemController {
       success: true,
       data
     };
+    console.log('获取我发布的动态')
     await next();
   }
 
-  // 删除刷剧
+  // 删除动态
 
   async delete (ctx, next) {
     let { time } = ctx.request.body;
@@ -101,6 +108,7 @@ export default class ItemController {
     ctx.body = {
       success: true
     };
+    console.log('删除我的动态');
     await next();
   }
 };

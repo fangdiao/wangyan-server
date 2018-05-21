@@ -47,7 +47,6 @@ export default class UserModel {
     let data = await users.findOne({ accountNumber });
     if (!data.contact.find(i => i === time)) {
       data.contact = [ ...data.contact, time ];
-      console.log(data.contact);
     }
     await users.update({ accountNumber }, data, err => {
       err && console.log(err);

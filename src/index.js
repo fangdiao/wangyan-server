@@ -5,5 +5,5 @@ require("babel-core/register")(
 );
 
 require("babel-polyfill");
-
+console.log('babel配置启动...');
 require("./app.js");

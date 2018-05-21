@@ -19,7 +19,7 @@ export default class UserController {
         success: false
       };
     }
-
+    console.log(`用户${accountNumber}登录成功`);
     await next();
   }
 
@@ -37,7 +37,7 @@ export default class UserController {
         success: true
       };
     }
-
+    console.log(`用户${accountNumber}注册成功`);
     await next();
   }
 
@@ -48,17 +48,7 @@ export default class UserController {
     ctx.body = {
       success: true
     };
-    await next();
-  }
-
-  // 添加信息
-
-  async info (ctx, next) {
-    let { body } = ctx.request;
-    await userModel.saveInfo(body);
-    ctx.body = {
-      success: true
-    };
+    console.log(`用户${body.accountNumber}填写信息成功`);
     await next();
   }
 
@@ -70,6 +60,7 @@ export default class UserController {
     ctx.body = {
       success: true
     };
+    console.log(`用户添加好友信息`);
     await next();
   }
 
@@ -81,6 +72,8 @@ export default class UserController {
       success: true,
       data
     };
+    console.log(`用户添加好友`);
+
     await next();
   }
 
@@ -93,6 +86,8 @@ export default class UserController {
       success: true,
       data
     };
+    console.log(`获取用户信息`);
+
     await next();
   }
 
@@ -103,6 +98,7 @@ export default class UserController {
     ctx.body = {
       success: true
     };
+    console.log(`用户删除好友`);
     await next();
   }
   // 获取用户详情
@@ -115,6 +111,7 @@ export default class UserController {
       data,
       release
     };
+    console.log(`获取用户详情`);
     await next();
   }
 };

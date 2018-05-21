@@ -18,7 +18,6 @@ export default class ItemModel {
     const start = index * 5;
     const end = (++index) * 5;
     res = res.slice(start, end);
-    console.log(res);
     return res || [];
   }
   // 存储动态
